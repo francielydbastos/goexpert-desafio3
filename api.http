@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:8000
+
+### Criar uma Order
+POST {{baseUrl}}/order
+Content-Type: application/json
+
+{
+  "id": "a1",
+  "price": 100.5,
+  "tax": 10.5
+}
+
+### Criar outra Order
+POST {{baseUrl}}/order
+Content-Type: application/json
+
+{
+  "id": "b2",
+  "price": 200.0,
+  "tax": 20.0
+}
+
+### Listar as Orders
+GET {{baseUrl}}/order
+Accept: application/json
